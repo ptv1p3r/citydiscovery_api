@@ -4,5 +4,7 @@ module.exports = app => {
 
     controller.userLogin = (req, res) => res.status(200).json(usersDB);
 
+    controller.usersList = (req, res) => res.status(200).json(usersDB);
+
     return controller;
 }
