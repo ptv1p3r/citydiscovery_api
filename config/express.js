@@ -9,6 +9,7 @@ module.exports = () => {
     app.set('port', process.env.PORT || config.get('server.port'));
 
     // MIDDLEWARES
+    app.use(bodyParser.urlencoded({ extended: true }));
     app.use(bodyParser.json());
 
     // endpoints autoload

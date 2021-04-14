@@ -1,9 +1,14 @@
+const auth = require('../auth/auth');
+
 module.exports = app => {
     const controller = app.controllers.users;
 
     app.route('/v2/user/login')
-        .get(controller.userLogin);
+        .post(controller.userLogin);
+
+    app.route('/v2/user/logout')
+        .post(controller.userLogout);
 
     app.route('/v2/users/list')
-        .get(controller.usersList);
+        .get(auth.verifyJWT, controller.usersList);
 }
