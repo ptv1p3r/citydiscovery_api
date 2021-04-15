@@ -1,5 +1,17 @@
 {
   "server": {
     "port": 4000
+  },
+  "redis": {
+    "host": "192.168.2.99",
+    "port": 6379
+  },
+  "token": {
+    "subject": "City Discovery Security",
+    "issuer": "City Discovery.pt",
+    "audience": "https://openmindsoftware.pt",
+    "version": "2.0",
+    "expire_minutes": 240,
+    "refresh_expire_minutes": 600
   }
 }

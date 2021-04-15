@@ -14,7 +14,7 @@ module.exports = () => {
 
     // endpoints autoload
     consign({cwd: 'api'})
-        .then('data')
+        .then('data') // temporary data
         .then('controllers')
         .then('routes')
         .into(app);
